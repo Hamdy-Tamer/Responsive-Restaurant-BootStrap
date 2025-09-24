@@ -36,6 +36,62 @@ h1, h2, h3, h4, h5, h6,
 
 /*================================================================================================================================================================================================*/
 
+/* Welcome Message */
+
+.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.welcome-overlay.hidden {
+    display: none; /* Hide the overlay */
+}
+
+.welcome-content {
+    animation: welcome_animation 1s ease-in-out;
+}
+
+.welcome-content .img-welcome-msg{
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+}
+
+/* Welcome Animation */
+
+@keyframes welcome_animation {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+.welcome-content .img-welcome-msg{
+    width: 300px;
+    height: 300px;
+}
+}
+
+/*================================================================================================================================================================================================*/
+
 /* Navigation */
 .navbar-brand {
     font-family: var(--font-main);
