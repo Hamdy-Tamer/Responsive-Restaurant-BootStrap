@@ -1,3 +1,13 @@
+// Welcome message
+
+const welcomeOverlay = document.querySelector(".welcome-overlay");
+
+setTimeout(() => {
+    welcomeOverlay.classList.add("hidden");
+}, 4000);
+
+//================================================================================================================================================
+
 // Media Queries for Cards 
 
 document.addEventListener('DOMContentLoaded', function () {
